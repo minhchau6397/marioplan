@@ -1,3 +1,7 @@
+html {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,112 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(/img/mario-bg.png) no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  background-color: #95e8f3;
+  min-height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+form {
+  padding: 20px;
+  margin-top: 60px;
+}
+
+form button,
+form h5 {
+  margin-top: 20px;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-color: #ec407a;
+  box-shadow: none;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav-wrap .brand-logo {
+  position: relative;
+
+}
+
+.mobile {
+  display: none;
+}
+
+nav .nav-wrap .brand-logo {
+  transform: none;
+  left: 0;
+}
+
+@media only screen and (max-width: 720px) {
+  .tablet {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+  nav {
+    height: auto;
+  }
+
+  .mobile .nav-toggler-icon {
+    overflow: hidden;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 24px;
+
+  }
+
+  .mobile .nav-toggler-icon.active {
+    color: white;
+    z-index: 21;
+    border-color: white;
+  }
+
+  button.mobile.nav-toggler-icon {
+    border: none;
+    height: 56px;
+    padding: 0;
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  button.mobile.nav-toggler-icon i {
+    color: white;
+    line-height: 56px;
+  }
+
+  .mobile .nav-item {
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #272728;
+    display: block;
+  }
+
+  .mobile .nav-item.active .right {
+    float: none;
+    height: 56px;
+    display: inline-block;
+  }
+
+  .mobile .nav-item.active {
+    max-height: 56px;
+    text-align: center;
+  }
 }
